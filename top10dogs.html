@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>ötp 10 greastest dogs of all time!!1!1!!""</title>
+
+<style>
+body {
+    background: repeating-linear-gradient(45deg, hotpink, yellow 10px, lime 20px);
+    font-family: Comic Sans MS, Papyrus, cursive;
+    color: blue;
+    text-align: center;
+    overflow-x: hidden;
+}
+
+.marquee {
+    font-size: 30px;
+    color: red;
+    animation: scroll 5s linear infinite;
+}
+
+@keyframes scroll {
+    0% { transform: translateX(100%); }
+    100% { transform: translateX(-100%); }
+}
+
+h1 {
+    font-size: 60px;
+    color: purple;
+    text-shadow: 5px 5px 0 lime, -5px -5px 0 cyan;
+    transform: rotate(-3deg);
+}
+
+.dog {
+    border: 5px dashed red;
+    margin: 30px;
+    padding: 20px;
+    background: rgba(255,255,255,0.7);
+    display: inline-block;
+
+    /* MOVEMENT ADDED */
+    animation: floaty 4s ease-in-out infinite;
+}
+
+/* gentle absurd floating */
+@keyframes floaty {
+    0%   { transform: translateY(0px) rotate(-1deg); }
+    50%  { transform: translateY(-12px) rotate(2deg); }
+    100% { transform: translateY(0px) rotate(-1deg); }
+}
+
+.dog h2 {
+    font-size: 30px;
+    color: darkgreen;
+}
+
+.drawing {
+    font-family: monospace;
+    font-size: 12px;
+    white-space: pre;
+    background: black;
+    color: lime;
+    display: inline-block;
+    padding: 10px;
+}
+
+.star {
+    position: fixed;
+    font-size: 30px;
+    animation: spin 3s linear infinite;
+}
+
+@keyframes spin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+/* BUTTONS */
+button {
+    font-size: 22px;
+    background: hotpink;
+    border: 4px solid yellow;
+    padding: 15px 25px;
+    cursor: pointer;
+    border-radius: 40px;
+    margin: 10px;
+}
+
+#reaction {
+    font-size: 35px;
+    color: darkblue;
+    margin-top: 10px;
+}
+</style>
+</head>
+
+<body>
+
+<div class="marquee">🔥 WOW BEST DOGS CLICK NOW FREE DOGS 100% REAL 🔥</div>
+
+<h1>ötp 10 greastest dogs of all time!!1!1!!""</h1>
+
+<!-- NEW BUTTON -->
+<button onclick="giveDog()">🎁 GET A FREE DOG!!! 🎁</button>
+
+<!-- PET BUTTON -->
+<button id="petBtn">🐾 PET THE DOGS 🐾</button>
+
+<div id="reaction"></div>
+
+<div class="dog">
+<h2>#1 border collie (too smart suspicious)</h2>
+<div class="drawing">
+ /\_/\
+( o.o )
+ > ^ <
+</div>
+</div>
+
+<div class="dog">
+<h2>#2 shiba inu (much wow very bark)</h2>
+<div class="drawing">
+ /\_/\
+( •_• )
+/ >🍞
+</div>
+</div>
+
+<div class="dog">
+<h2>#3 jack russell terrier (chaos goblin)</h2>
+<div class="drawing">
+ /\_/\
+( x_x )
+ /   \
+</div>
+</div>
+
+<div class="dog">
+<h2>#4 labrador (eats EVERYTHING)</h2>
+<div class="drawing">
+ ( •🐽• )
+/|   |\
+ /   \
+</div>
+</div>
+
+<div class="dog">
+<h2>#5 golden retriever (too pure for this world)</h2>
+<div class="drawing">
+ ( ^_^ )
+/| ❤️ |\
+ /   \
+</div>
+</div>
+
+<div class="dog">
+<h2>#6 husky (dramatic singer)</h2>
+<div class="drawing">
+ /\_/\
+( 0_0 )  AAAAAAAAA
+/     \
+</div>
+</div>
+
+<div class="dog">
+<h2>#7 doberman (secret agent)</h2>
+<div class="drawing">
+ ( -_- )
+/| 🕶️ |\
+ /   \
+</div>
+</div>
+
+<div class="dog">
+<h2>#8 german shepard (police but fluffy)</h2>
+<div class="drawing">
+ ( •_• )
+/| 🚓 |\
+ /   \
+</div>
+</div>
+
+<div class="dog">
+<h2>#9 australian shepard (confused geography)</h2>
+<div class="drawing">
+ ( @_@ )
+/| 🌏 |\
+ /   \
+</div>
+</div>
+
+<div class="dog">
+<h2>#10 street dog (final boss)</h2>
+<div class="drawing">
+ ( ಠ_ಠ )
+/| 🔥 |\
+ /   \
+</div>
+</div>
+
+<!-- floating stars -->
+<div class="star" style="top:10%; left:5%;">⭐</div>
+<div class="star" style="top:50%; left:80%;">💥</div>
+<div class="star" style="top:70%; left:20%;">🌈</div>
+
+<script>
+// PET DOGS
+const petBtn = document.getElementById("petBtn");
+const reaction = document.getElementById("reaction");
+
+const messages = [
+    "🐶 WOOF!!!",
+    "🐾 DOGS ACCEPT PETTING",
+    "💥 TOO MUCH DOG ENERGY",
+    "😳 SYSTEM OVERWHELMED",
+    "🔥 HAPPINESS MAXIMUM"
+];
+
+petBtn.onclick = () => {
+    reaction.innerText = messages[Math.floor(Math.random() * messages.length)];
+};
+
+// BARK SOUND
+function bark() {
+    const ctx = new (window.AudioContext || window.webkitAudioContext)();
+    const osc = ctx.createOscillator();
+    const gain = ctx.createGain();
+
+    osc.type = "square";
+    osc.frequency.value = 140;
+
+    gain.gain.value = 0.2;
+
+    osc.connect(gain);
+    gain.connect(ctx.destination);
+
+    osc.start();
+    osc.frequency.exponentialRampToValueAtTime(60, ctx.currentTime + 0.2);
+    gain.gain.exponentialRampToValueAtTime(0.0001, ctx.currentTime + 0.25);
+    osc.stop(ctx.currentTime + 0.3);
+}
+
+// FREE DOG BUTTON
+function giveDog() {
+    bark();
+
+    const dogNames = [
+        "you got: invisible dog (very rare)",
+        "you got: slightly suspicious dog",
+        "you got: emotionally supportive labrador",
+        "you got: government-certified shiba",
+        "you got: chaos terrier XL edition"
+    ];
+
+    alert(dogNames[Math.floor(Math.random() * dogNames.length)]);
+}
+</script>
+
+</body>
+</html>
